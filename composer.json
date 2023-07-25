@@ -1,6 +1,7 @@
 {
     "name": "volktron/cophpee",
     "type": "project",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "app\\": "app/"
@@ -12,5 +13,7 @@
             "email": "henrik.volckmer@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "phpunit/phpunit": "^10.2"
+    }
 }

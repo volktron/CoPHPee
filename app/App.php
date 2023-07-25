@@ -2,11 +2,15 @@
 
 namespace app;
 
+use app\utils\Router;
+use Throwable;
+
 class App
 {
-    public function execute(string $path = '') {
+    public function execute(string $method, string $path = ''): void
+    {
         try {
-            $route = \app\utils\Router::route($path);
+            $route = Router::route($method, $path);
             $controllerName = '\app\controllers\\' . $route['controller'];
             $controller = new $controllerName();
             call_user_func_array([$controller, $route['method']], $route['params']);

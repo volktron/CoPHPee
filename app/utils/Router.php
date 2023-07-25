@@ -4,7 +4,7 @@ namespace app\utils;
 
 class Router
 {
-    public static function route(string $path): array {
+    public static function route(string $method, string $path): array {
         $routes = require __DIR__ . '/../routes/routes.php';
         $routes = array_filter($routes, fn($item) => $item['type'] == 'get');
 
@@ -14,7 +14,7 @@ class Router
         foreach($routes as $route)
         {
             $uri = preg_replace('/\{([^}]+)}/', '(\w+)', $route['uri']);
-            if($route['type'] == strtolower($_SERVER['REQUEST_METHOD'])
+            if($route['type'] == strtolower($method)
                 && preg_match('/' . str_replace('/', '\\/', $uri) . '/', $path, $matches))
             {
                 $paramsMatches = array_slice($matches, 1);

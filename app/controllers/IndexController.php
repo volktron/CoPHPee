@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use Cophpee\Components\Controller\Controller;
+
 class IndexController extends Controller
 {
     public function default(): void

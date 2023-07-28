@@ -15,7 +15,14 @@
             "email": "henrik.volckmer@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/volktron/cophpee-components"
+        }
+    ],
     "require": {
-        "phpunit/phpunit": "^10.2"
+        "phpunit/phpunit": "^10.2",
+        "volktron/cophpee-components": "^0.0.1"
     }
 }

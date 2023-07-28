@@ -2,7 +2,7 @@
 
 namespace tests\endpoints;
 
-use tests\AppTestCase;
+use Cophpee\Tests\AppTestCase;
 
 class IndexControllerTest extends AppTestCase
 {

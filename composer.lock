@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9b6e25d308bf1ccc8ac34b63e9c10e7",
+    "content-hash": "9ed1a83792c0d32fe202c9dbb79daa12",
     "packages": [
         {
             "name": "myclabs/deep-copy",
@@ -1616,19 +1616,21 @@
         },
         {
             "name": "volktron/cophpee-components",
-            "version": "0.0.1",
+            "version": "0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/volktron/cophpee-components.git",
-                "reference": "86aab4f0e388af1d5127711f77e06649d04f0f68"
+                "reference": "7bddf5432707bdd256f2e4ba8d165a441b25741e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/volktron/cophpee-components/zipball/86aab4f0e388af1d5127711f77e06649d04f0f68",
-                "reference": "86aab4f0e388af1d5127711f77e06649d04f0f68",
+                "url": "https://api.github.com/repos/volktron/cophpee-components/zipball/7bddf5432707bdd256f2e4ba8d165a441b25741e",
+                "reference": "7bddf5432707bdd256f2e4ba8d165a441b25741e",
                 "shasum": ""
             },
             "require": {
+                "ext-pdo": "*",
+                "php": ">=8.2",
                 "phpunit/phpunit": "^10.2"
             },
             "type": "library",
@@ -1648,10 +1650,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/volktron/cophpee-components/tree/0.0.1",
+                "source": "https://github.com/volktron/cophpee-components/tree/0.0.2",
                 "issues": "https://github.com/volktron/cophpee-components/issues"
             },
-            "time": "2023-07-28T12:00:25+00:00"
+            "time": "2023-07-30T15:22:57+00:00"
         }
     ],
     "packages-dev": [],
@@ -1660,7 +1662,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=8.2"
+    },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }

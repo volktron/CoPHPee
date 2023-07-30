@@ -1,6 +1,6 @@
 {
     "name": "volktron/cophpee",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "type": "project",
     "license": "MIT",
     "autoload": {
@@ -22,7 +22,8 @@
         }
     ],
     "require": {
+        "php": ">=8.2",
         "phpunit/phpunit": "^10.2",
-        "volktron/cophpee-components": "^0.0.1"
+        "volktron/cophpee-components": "^0.0.2"
     }
 }

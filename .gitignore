@@ -1,3 +1,7 @@
+# Config
+configs/*
+!configs/examples
+
 # IDEs
 .idea
 

@@ -2,11 +2,17 @@
 
 namespace app;
 
+use Cophpee\Components\Facade\DB;
 use Cophpee\Components\Router\Router;
 use Throwable;
 
 class App
 {
+    public function __construct()
+    {
+        DB::init(require_once __DIR__ . '/../configs/databases.php');
+    }
+
     public function execute(string $method, string $path = ''): void
     {
         try {

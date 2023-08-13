@@ -10,6 +10,12 @@ class App
 {
     public function __construct()
     {
+        // Handle request data. GET and POST requests already get handled by PHP
+        if($_SERVER['REQUEST_METHOD'] !== 'GET' && $_SERVER['REQUEST_METHOD'] !== 'POST') {
+            $_REQUEST = file_get_contents("php://input");
+        }
+
+        // Initialize things.
         DB::init(require_once __DIR__ . '/../configs/databases.php');
     }
 

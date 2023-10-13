@@ -8,7 +8,9 @@ use Throwable;
 
 class App
 {
-    public function __construct()
+    protected Router $router;
+
+    public function __construct(array $config)
     {
         // Handle request data. GET and POST requests already get handled by PHP
         if($_SERVER['REQUEST_METHOD'] !== 'GET' && $_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -16,14 +18,14 @@ class App
         }
 
         // Initialize things.
-        DB::init(require_once __DIR__ . '/../configs/databases.php');
+        DB::init($config['db'] ?? []);
+        $this->router = new Router($config['routes'] ?? []);
     }
 
     public function execute(string $method, string $path = ''): void
     {
         try {
-            $routes = require_once __DIR__ . '/routes/routes.php';
-            $route = (new Router($routes))->route($method, $path);
+            $route = $this->router->route($method, $path);
             $controllerName = '\app\controllers\\' . $route['controller'];
             $controller = new $controllerName();
             call_user_func_array([$controller, $route['method']], $route['params']);

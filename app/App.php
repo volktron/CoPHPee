@@ -10,7 +10,7 @@ class App
 {
     protected Router $router;
 
-    public function __construct(array $config)
+    public function __construct(protected array $config)
     {
         // Handle request data. GET and POST requests already get handled by PHP
         if($_SERVER['REQUEST_METHOD'] !== 'GET' && $_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -30,11 +30,13 @@ class App
             $controller = new $controllerName();
             call_user_func_array([$controller, $route['method']], $route['params']);
         } catch (Throwable $throwable) {
-            // TODO: proper error handling
-            echo '<pre>';
-            var_dump($throwable->getMessage());
-            var_dump(debug_backtrace());
-            echo '</pre>';
+            if($this->config['mode'] == 'development') {
+                // TODO: proper error handling, logging
+                echo '<pre>';
+                var_dump($throwable->getMessage());
+                var_dump(debug_backtrace());
+                echo '</pre>';
+            }
         }
     }
 }

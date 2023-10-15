@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-use app\App;
+use Cophpee\Components\App\App;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e421375a6add6642fea0a2eb8405fe8e",
+    "content-hash": "aa59f4f05c1df34add79867f1ceefa1d",
     "packages": [
         {
             "name": "myclabs/deep-copy",
@@ -1616,16 +1616,16 @@
         },
         {
             "name": "volktron/cophpee-components",
-            "version": "0.0.5",
+            "version": "0.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/volktron/cophpee-components.git",
-                "reference": "89eba56ee96596e4321a7d5c7c350989794ad6d7"
+                "reference": "024ea18e9590eb1bd790688a2827bf0737d412eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/volktron/cophpee-components/zipball/89eba56ee96596e4321a7d5c7c350989794ad6d7",
-                "reference": "89eba56ee96596e4321a7d5c7c350989794ad6d7",
+                "url": "https://api.github.com/repos/volktron/cophpee-components/zipball/024ea18e9590eb1bd790688a2827bf0737d412eb",
+                "reference": "024ea18e9590eb1bd790688a2827bf0737d412eb",
                 "shasum": ""
             },
             "require": {
@@ -1636,10 +1636,11 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Cophpee\\Components\\": "src/",
-                    "Cophpee\\Tests\\": "tests/"
+                    "Cophpee\\Tests\\": "tests/",
+                    "Cophpee\\Components\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1650,10 +1651,10 @@
                 }
             ],
             "support": {
-                "source": "https://github.com/volktron/cophpee-components/tree/0.0.5",
-                "issues": "https://github.com/volktron/cophpee-components/issues"
+                "issues": "https://github.com/volktron/cophpee-components/issues",
+                "source": "https://github.com/volktron/cophpee-components/tree/0.0.6"
             },
-            "time": "2023-08-13T13:43:16+00:00"
+            "time": "2023-10-15T16:41:22+00:00"
         }
     ],
     "packages-dev": [],

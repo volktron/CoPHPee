@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+use Cophpee\Components\Cli\Cli;
+
+require_once 'vendor/autoload.php';
+
+$cli = new Cli();
+exit((int) !$cli->processCommand());

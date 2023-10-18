@@ -18,6 +18,6 @@
     "require": {
         "php": ">=8.2",
         "phpunit/phpunit": "^10.2",
-        "volktron/cophpee-components": "^0.1.0"
+        "volktron/cophpee-components": "^0.1.2"
     }
 }
